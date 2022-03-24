@@ -29,15 +29,24 @@ let pokemonList = [
         height: '1.7',
         types: ['fire', 'flying'],
     },
-
 ];
 
-/*
-for (let i = 0; i<pokemonList_.length; i++) {
-    console.log(pokemonList_[i].name);
-    console.log(pokemonList_[i].height);
-    for(let j = 0; j < pokemonList_[i].types.length; j++ )
+// Loop of pokemonList
+for (let i = 0; i<pokemonList.length; i++) {
+    console.log(pokemonList[i].name);
+    console.log(pokemonList[i].height);
+    for(let j = 0; j < pokemonList[i].types.length; j++ )
     {
-     console.log(pokemonList_[i].types[j])   
+     console.log(pokemonList[i].types[j])   
     }
-} */
+    {
+        document.write(" Name: " + pokemonList[i].name);
+        document.write( " (height: " + pokemonList[i].height +')' );
+    // Conditional Text 
+        if (pokemonList[i].height > 1.8) {
+            document.write( " - Wow, that\'s big!");
+        }
+    }
+    document.write("<br>" + "<br>");
+
+}
