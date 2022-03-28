@@ -1,18 +1,19 @@
+
 let pokemonList = [
-    {
+     {
         name:  "Bulbasaur",
         height: '.7',
-        types: ['grass', 'poison']
+        types: ['grass', ' poison']
     },
     {
         name:  "Ivysaur",
         height: '1',
-        types: ['grass', 'poison']
+        types: ['grass', ' poison']
     },
     {
         name: "Venusaur",
         height: '2',
-        types: ['grass', 'poison']
+        types: ['grass', ' poison']
     },
     {
         name: "Charmander",
@@ -27,15 +28,17 @@ let pokemonList = [
     {
         name: "Charizard",
         height: '1.7',
-        types: ['fire', 'flying'],
+        types: ['fire', ' flying'],
     },
 ];
 
-// Loop of pokemonList
+
+/* For Loop of pokemonList
 for (let i = 0; i<pokemonList.length; i++) {
     console.log(pokemonList[i].name);
     console.log(pokemonList[i].height);
     for(let j = 0; j < pokemonList[i].types.length; j++ )
+
     {
      console.log(pokemonList[i].types[j])   
     }
@@ -50,3 +53,19 @@ for (let i = 0; i<pokemonList.length; i++) {
     document.write("<br>" + "<br>");
 
 }
+*/
+
+// forEach Loop for pokemonList
+pokemonList.forEach(function(pokemons) {
+    console.log("Name: " + pokemons.name + " Height: " + pokemons.height + " Types: " + pokemons.types);
+
+    {
+        document.write(" Name: " + pokemons.name + " (height: " + pokemons.height +')');
+    // Conditional Text 
+        if (pokemons.height >= 2) {
+            document.write( " - Wow, that\'s big!");
+        }
+    }
+    document.write("<br>" + "<br>");
+
+});
