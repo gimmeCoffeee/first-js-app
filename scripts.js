@@ -40,9 +40,33 @@ let pokemonRepository = (function () {
             return pokemonList;
         }
 
+        function addListener (button, pokemon) {
+            button.addEventListener ('click', function () {
+                showDetails(pokemon)
+            });
+
+        }
+
+        function addListItem(pokemon) {
+            let pokemonList = document.querySelector('.pokemon-list');
+            let listpokemon = document.createElement('li');
+            let button = document.createElement('button');
+            button.innerText = pokemon.name;
+            button.classList.add('button-class');
+            listpokemon.appendChild(button);
+            pokemonList.appendChild(listpokemon);
+            addListener(button, pokemon);
+        }
+
+        function showDetails(pokemon) {
+            console.log(pokemon)
+        }
+
         return {
             add: add,
-            getAll: getAll
+            getAll: getAll,
+            addListItem: addListItem,
+            showDetails: showDetails
         };
 
         document.write(pokemonList);
@@ -51,6 +75,24 @@ let pokemonRepository = (function () {
 
 console.log(pokemonRepository.getAll())
 
+// forEach Loop for pokemonList
+pokemonRepository.getAll().forEach(function (pokemon) {
+    pokemonRepository.addListItem(pokemon);
+    
+});
+
+/* Goes directly below the forEach
+console.log("Name: " + pokemon.name + " Height: " + pokemon.height + " Types: " + pokemon.types);
+
+    {
+        document.write(" Name: " + pokemon.name + " (height: " + pokemon.height +')');
+    // Conditional Text 
+        if (pokemon.height >= 2) {
+            document.write( " - Wow, that\'s big!");
+        }
+    }
+    document.write("<br>" + "<br>");
+*/
 
 /* For Loop of pokemonList
 for (let i = 0; i<pokemonList.length; i++) {
@@ -73,18 +115,3 @@ for (let i = 0; i<pokemonList.length; i++) {
 
 }
 */
-
-// forEach Loop for pokemonList
-pokemonRepository.getAll().forEach(function (pokemons) {
-    console.log("Name: " + pokemons.name + " Height: " + pokemons.height + " Types: " + pokemons.types);
-
-    {
-        document.write(" Name: " + pokemons.name + " (height: " + pokemons.height +')');
-    // Conditional Text 
-        if (pokemons.height >= 2) {
-            document.write( " - Wow, that\'s big!");
-        }
-    }
-    document.write("<br>" + "<br>");
-
-});
