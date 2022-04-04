@@ -20,7 +20,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-
+/* 
 #modal-container {
   position: fixed;
   padding: 20px;
@@ -40,9 +40,9 @@ body {
   /*center the modal */
   display: grid;
   text-align: center;
-}
+} */
 
-.modal {
+/* .modal {
   margin: auto;
   display: inline-block;
   box-sizing: border-box;
@@ -51,7 +51,7 @@ body {
   width: 100%;
   max-width: 700px;
   text-align: left;
-}
+} */
 
 .image-class {
   width: 30%;
