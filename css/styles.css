@@ -1,4 +1,4 @@
-.button-class {
+ .button-class {
     background-color: #4caf50; /* Green */
     border: none;
     color: white;
@@ -13,23 +13,12 @@
     background-color: white;
     color: black;
     border: 2px solid #4caf50;
-  }
+  } 
 
   html,
 body {
   font-family: Arial, sans-serif;
 }
-
-/* 
-#modal-container {
-  position: fixed;
-  padding: 20px;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
 
   /* above other content */
   z-index: 999;
@@ -40,18 +29,7 @@ body {
   /*center the modal */
   display: grid;
   text-align: center;
-} */
-
-/* .modal {
-  margin: auto;
-  display: inline-block;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 15px;
-  width: 100%;
-  max-width: 700px;
-  text-align: left;
-} */
+}
 
 .image-class {
   width: 30%;
@@ -82,15 +60,13 @@ body {
 }
 
 #modal-container.is-visible {
-  display: block;
-.button-class {
+  display: block; {
     background-color: #4caf50; /* Green */
     border: none;
     color: white;
     padding: 16px 32px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    text-decoration: none
     font-size: 16px;
     margin: 4px 2px;
     transition-duration: 0.4s;
@@ -98,7 +74,7 @@ body {
     background-color: white;
     color: black;
     border: 2px solid #4caf50;
-  }
+}
 
   html,
 body {
@@ -169,3 +145,29 @@ body {
 #modal-container.is-visible {
   display: block;
 }
+
+/* The following code is no longer valid. Keeping code in file for my own references.
+
+/* Modal before bootstrap
+  .modal {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+}
+
+ modal container before bootstrap
+  #modal-container {
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+*/
